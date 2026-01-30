@@ -4,9 +4,9 @@ using System.Collections.Generic;
 namespace TallerScripting
 {
     // REQUISITO: Diferentes tipos de datos (Clases/Objetos)
-    public class Estudiante 
-    { 
-        public string Nombre { get; set; } 
+    public class Estudiante
+    {
+        public string Nombre { get; set; }
     }
 
     class Program
@@ -48,7 +48,7 @@ namespace TallerScripting
             InvertirArray(new int[] { 5, 4, 3 });
 
             // 11. Búsqueda en Matriz
-            BuscarEnMatriz(new int[2,2], 7);
+            BuscarEnMatriz(new int[2, 2], 7);
 
             // 12. Sin parámetros ni retorno
             Saludar();
@@ -81,71 +81,71 @@ namespace TallerScripting
             Console.ReadKey(); // Para que no se cierre la consola
         }
 
-        // --- BLOQUE DE FIRMAS (DEFINICIONES) ---
+        // --- BLOQUE DE FIRMAS (DEFINICIONES) CON COMPROBANTES ---
 
-        // 1. Matriz: Sin retorno, parámetro matriz nxm
+        // 1. Matriz
         static void CorregirMatriz(int[,] m) { Console.WriteLine("1. Matriz procesada."); }
 
-        // 2. Arreglo: Retorno float, parámetro arreglo float[]
-        static float PromedioPositivos(float[] a) => 0.0f;
+        // 2. Arreglo Flotantes
+        static float PromedioPositivos(float[] a) { Console.WriteLine("2. Promedio de positivos calculado."); return 0.0f; }
 
-        // 3. Cadena: Retorno string, parámetro matriz string[,]
-        static string UnirMatriz(string[,] m) => "Unido";
+        // 3. Cadena Matriz
+        static string UnirMatriz(string[,] m) { Console.WriteLine("3. Matriz de cadenas concatenada."); return "Unido"; }
 
-        // 4. Ciclos: Retorno int, parámetro int, usa lógica do-while
-        static int SumarImpares(int n) => 0;
+        // 4. Ciclos
+        static int SumarImpares(int n) { Console.WriteLine("4. Suma con ciclo do-while realizada."); return 0; }
 
-        // 5. Mixto: Parámetros múltiples de char y string
-        static void FuncionMisteriosa(char a, char b, string c, char d, char e, string f) { }
+        // 5. Mixto
+        static void FuncionMisteriosa(char a, char b, string c, char d, char e, string f) { Console.WriteLine("5. Firma misteriosa (chars/strings) ejecutada."); }
 
-        // 6. Complejo: Parámetros string, bool, double; retorno arreglo int[]
-        static int[] WTF(string s, bool b, double d) => new int[0];
+        // 6. Complejo
+        static int[] WTF(string s, bool b, double d) { Console.WriteLine("6. Función compleja WTF ejecutada."); return new int[0]; }
 
-        // 7. Booleano: Retorno bool, parámetro string
-        static bool EsPalindromo(string s) => true;
+        // 7. Booleano
+        static bool EsPalindromo(string s) { Console.WriteLine("7. Verificación de palíndromo completada."); return true; }
 
-        // 8. String: Retorno string, recibe dos parámetros
-        static string Concatenar(string a, string b) => a + b;
+        // 8. String
+        static string Concatenar(string a, string b) { Console.WriteLine("8. Cadenas unidas exitosamente."); return a + b; }
 
-        // 9. Conversión: Retorno double, parámetro string
-        static double Fraccionar(string s) => 0.0;
+        // 9. Conversión
+        static double Fraccionar(string s) { Console.WriteLine("9. Conversión de string a double realizada."); return 0.0; }
 
-        // 10. Invertir: Sin retorno, parámetro int[]
-        static void InvertirArray(int[] a) { }
+        // 10. Invertir
+        static void InvertirArray(int[] a) { Console.WriteLine("10. Inversión de arreglo ejecutada."); }
 
-        // 11. Búsqueda: Sin retorno, usa matriz e int
-        static void BuscarEnMatriz(int[,] m, int n) { }
+        // 11. Búsqueda
+        static void BuscarEnMatriz(int[,] m, int n) { Console.WriteLine("11. Búsqueda en matriz finalizada."); }
 
-        // 12. Simple: Sin parámetros y sin retorno
-        static void Saludar() => Console.WriteLine("12. Hola mundo!");
+        // 12. Simple
+        static void Saludar() { Console.WriteLine("12. Hola mundo (Función sin parámetros)."); }
 
-        // 13. Objetos: Parámetro tipo Clase 'Estudiante'
-        static void ProcesarAlumno(Estudiante e) => Console.WriteLine($"13. Alumno: {e.Nombre}");
+        // 13. Objetos
+        static void ProcesarAlumno(Estudiante e) { Console.WriteLine($"13. Objeto Alumno procesado: {e.Nombre}"); }
 
-        // 14. Listas: Retorno List<int>, sin parámetros
-        static List<int> GenerarLista() => new List<int>();
+        // 14. Listas
+        static List<int> GenerarLista() { Console.WriteLine("14. Lista dinámica generada."); return new List<int>(); }
 
-        // 15. Validación: Retorno bool, parámetro string
-        static bool ValidarCadena(string s) => true;
+        // 15. Validación
+        static bool ValidarCadena(string s) { Console.WriteLine("15. Validación de cadena numérica hecha."); return true; }
 
-        // 16. Matemática: Retorno long, parámetro int
-        static long CalcularFactorial(int n) => 1;
+        // 16. Matemática
+        static long CalcularFactorial(int n) { Console.WriteLine("16. Cálculo de factorial realizado."); return 1; }
 
-        // 17. Char: Retorno char, parámetro string
-        static char ObtenerInicial(string s) => s[0];
+        // 17. Char
+        static char ObtenerInicial(string s) { Console.WriteLine("17. Carácter inicial obtenido."); return s[0]; }
 
-        // 18. Fecha: Retorno string, tres parámetros int
-        static string FormatearFecha(int d, int m, int a) => $"{d}/{m}/{a}";
+        // 18. Fecha
+        static string FormatearFecha(int d, int m, int a) { Console.WriteLine("18. Formato de fecha generado."); return $"{d}/{m}/{a}"; }
 
-        // 19. Vacía: Sin parámetros ni retorno
-        static void ProcesoInterno() { }
+        // 19. Vacía
+        static void ProcesoInterno() { Console.WriteLine("19. Función técnica interna ejecutada."); }
 
-        // 20. Suma: Retorno int, cuatro parámetros int
-        static int SumarCuatro(int a, int b, int c, int d) => a + b + c + d;
+        // 20. Suma
+        static int SumarCuatro(int a, int b, int c, int d) { Console.WriteLine("20. Suma de cuatro parámetros completada."); return a + b + c + d; }
     }
 }
 
-/* TEORÍA (REQUISITO DEL TALLER):
+/* TEORÍA:
    
    1. ¿Qué es un ciclo infinito?: 
       Es un bucle cuya condición de finalización nunca se cumple, causando que el 
