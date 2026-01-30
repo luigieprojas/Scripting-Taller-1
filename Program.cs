@@ -141,14 +141,3 @@ namespace TallerScripting
         static int SumarCuatro(int a, int b, int c, int d) { Console.WriteLine("20. Suma funciona."); return a + b + c + d; }
     }
 }
-
-/* TEORÍA:
-   
-   1. ¿Qué es un ciclo infinito?: 
-      Es un bucle cuya condición de finalización nunca se cumple, causando que el 
-      programa se ejecute indefinidamente. Ejemplo: while(true) { }.
-
-   2. ¿Qué es un error en tiempo de ejecución?: 
-      Es un error que no es detectado por el compilador (la sintaxis es correcta) 
-      pero ocurre mientras el programa corre. Ejemplo: Dividir por cero.
-*/
